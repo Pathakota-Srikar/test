@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <th>
+                Nmae
+            </th>
+            <th>
+                Location
+            </th>
+        </thead>
+        {% for i in col %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.location}}</td>
+            <td><a href="/update/{{i.id}}">update</a>
+                <a href='/delete/{{i.id}}'>Delete</a>
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
